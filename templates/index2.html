@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantenimiento e instalaciones electricas</title>
+
+<!-- Ejemplo de rutas corregidas -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gst atic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3911647d80.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <div class="menu container">
+          <img src="{{ url_for('static', filename='images/eficaselec.png')}}" alt="" class="logo" />
+          <input type="checkbox" id="menu" />
+          <label for="menu" >
+            <img src="{{ url_for('static', filename='images/menu.png')}}" class="menu-icono"  alt=""/>
+          </label>
+          <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('index') }}">INICIO</a></li>
+                <li><a href="{{ url_for('servicios') }}">SERVICIOS</a></li>
+                <li><a href="{{ url_for('contacto') }}">CONTACTO</a></li>
+            </ul>
+        </nav>
+        </div>
+      </div>
+    </header>
+    <a href="https://api.whatsapp.com/send?phone=917996653" class="btn-wsp" target="_blank">
+      <i class="fa fa-whatsapp"></i>
+  </a>
+    <section id="contacto" class="contact-section">
+            <h2>CONTACTO</h2>
+            <form id="contact-form" method="POST" action="/send_email">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    <div id="flash-messages" class="flash-messages"></div>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+          <div class="box">
+              <figure>
+                  <a href="#">
+                      <img src="{{ url_for('static', filename='images/eficaselec.png')}}" alt="" class="logo-image" />
+                  </a>
+              </figure>
+          </div>
+          <div class="box">
+              <h2>SOBRE NOSOTROS</h2>
+              <p>
+                  Brindamos soluciones integrales en instalaciones y mantenimiento eléctrico bajo el estándar SEF:
+                  SEGURO, EFICAZ y FUNCIONAL.
+              </p>
+          </div>
+          <div class="box">
+              <h2>CONTACTO</h2>
+              <p>Tlf: 937081073 / 917996653</p>
+              <p>Email: eficaselec@gmail.com</p>
+          </div>
+          <div class="box">
+              <h2>SIGUENOS</h2>
+              <div class="red-social">
+                  <a href="https://www.facebook.com/profile.php?id=61572271664982" target="_blank"class="fa fa-facebook"></a>
+                  <a href="https://www.youtube.com/@eficaselec-wn9ro" target="_blank" class="fa fa-youtube"></a>
+                  <a href="https://www.tiktok.com/@usereficaselec" target="_blank" class="fa-brands fa-tiktok"></a>
+              </div>
+          </div>
+      </div>
+      <div class="grupo-2">
+          <small>&copy;2025 <b>Slee Dw</b> - Todos los Derechos Reservados.</small>
+      </div>
+  </footer>
+  </body>
+</html>

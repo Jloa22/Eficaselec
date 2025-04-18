@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantenimiento e instalaciones electricas</title>
+
+    <!-- Ejemplo de rutas corregidas -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/3911647d80.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="menu container">
+                <img src="{{ url_for('static', filename='images/eficaselec.png')}}" alt="" class="logo" />
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="{{ url_for('static', filename='images/menu.png')}}" class="menu-icono" alt="" />
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">INICIO</a></li>
+                        <li><a href="{{ url_for('servicios') }}">SERVICIOS</a></li>
+                        <li><a href="{{ url_for('contacto') }}">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <a href="https://api.whatsapp.com/send?phone=917996653" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Nuestros Servicios</h1>
+                <p class="section-description">
+                    En Eficaselec, nos especializamos en brindar soluciones completas en
+                    instalaciones eléctricas y sistemas de automatización. Nuestra
+                    experiencia y enfoque SEF (Seguro, Eficaz y Funcional) garantizan
+                    resultados de alta calidad, tanto en proyectos nuevos como en
+                    mantenimiento.
+                </p>
+            </div>
+
+            <div class="services-category">
+                <h2 class="category-title">Instalaciones Eléctricas</h2>
+                <div class="services-grid">
+                    <!-- Servicio 1 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/sistemas-proteccion.jpg')}}"
+                                alt="Sistema de protección eléctrica" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Cableado Eléctrico y Control de Protección</h3>
+                            <p class="service-description">
+                                Tendido y organización de cableado eléctrico según norma.
+                                Instalación de dispositivos de protección (disyuntores,
+                                breakers, interruptores diferenciales).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/canalizacion-soporte.jpg')}}"
+                                alt="Canalización eléctrica" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Canalización y Montaje de Ductos</h3>
+                            <p class="service-description">
+                                Canaletas, bandejas portacables, tuberías EMT y PVC.
+                                Montaje ordenado y estético para espacios residenciales o industriales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/motorelectrico.jpg')}}"
+                                alt="Máquinas eléctricas" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Máquinas Eléctricas</h3>
+                            <p class="service-description">
+                                Instalación y mantenimiento de transformadores, motores
+                                eléctricos y bombas. Configuración y puesta en marcha de equipos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/linea-tierra.jpg')}}"
+                                alt="Protección a tierra" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Línea de Protección a Tierra</h3>
+                            <p class="service-description">
+                                Sistemas de puesta a tierra para instalaciones seguras y
+                                normativas. Verificación de continuidad y resistencia de tierra.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/automatizacionycontrol.jpeg')}}"
+                                alt="Automatización domótica" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Automatización y Control Domótico</h3>
+                            <p class="service-description">
+                                Automatización de iluminación, climatización y otros sistemas
+                                eléctricos. Soluciones inteligentes para hogares y oficinas (domótica).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/controldeacceso.jpg')}}"
+                                alt="Control de acceso" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Control de Acceso y Seguridad</h3>
+                            <p class="service-description">
+                                Instalación de cerraduras electrónicas, porteros y sistemas de acceso con tarjetas o
+                                biometría. Integración con sistemas domóticos si se requiere.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 7 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/camaras-seguridad.jpg')}}"
+                                alt="Cámaras de seguridad" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Cámaras de Seguridad</h3>
+                            <p class="service-description">
+                                Sistemas de videovigilancia CCTV con grabación local o en la nube.
+                                Configuración de cámaras IP, visión nocturna y monitoreo remoto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 8 -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <img src="{{ url_for('static', filename='images/alarmacontraincendios.jpg')}}"
+                                alt="Alarmas contra incendios" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Alarmas Contra Incendios</h3>
+                            <p class="service-description">
+                                Diseño e instalación de sistemas de detección y alarma contra incendios.
+                                Sensores de humo, calor y sirenas de evacuación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-category">
+                <h2 class="category-title">Mantenimiento Eléctrico</h2>
+                <p class="category-description">
+                    Para que una instalación eléctrica funcione de manera eficiente es
+                    necesario que se puedan mantener en perfecto estado tanto las
+                    instalaciones de alimentación de un circuito eléctrico, así como los
+                    equipos electromecánicos.
+                </p>
+
+                <div class="maintenance-types">
+                    <div class="maintenance-card">
+                        <h3 class="maintenance-title">Mantenimiento Preventivo y Predictivo</h3>
+                        <p class="maintenance-description">
+                            Tiene como objetivo anticiparse a fallos que puedan afectar el
+                            funcionamiento de tus sistemas eléctricos. Realizamos inspecciones
+                            programadas y ajustes necesarios para prolongar la vida útil de los
+                            equipos y evitar incidentes.
+                        </p>
+                        <ul class="maintenance-list">
+                            <li>Inspección de conexiones y puntos críticos</li>
+                            <li>Verificación de líneas de puesta a tierra</li>
+                            <li>Detección de sobrecargas eléctricas</li>
+                            <li>Identificación de fugas de corriente</li>
+                            <li>Medición de caídas de tensión</li>
+                            <li>Control de relación de potencia contratada vs. potencia utilizada</li>
+                            <li>Asesoramiento sobre consumo eficiente y cálculo del costo por kilovatio hora (kWh)</li>
+                        </ul>
+                    </div>
+
+                    <div class="maintenance-card">
+                        <h3 class="maintenance-title">Mantenimiento Correctivo</h3>
+                        <p class="maintenance-description">
+                            Enfocado en solucionar fallas o emergencias eléctricas de forma rápida
+                            y eficaz. Reaccionamos ante cualquier imprevisto que ponga en riesgo
+                            tus equipos o tu seguridad.
+                        </p>
+                        <ul class="maintenance-list">
+                            <li>Corrección de cortocircuitos</li>
+                            <li>Reparación de desconexiones y cortes imprevistos</li>
+                            <li>Solución de sobretensiones o bajas de voltaje</li>
+                            <li>Sustitución de componentes dañados o defectuosos</li>
+                            <li>Diagnóstico de consumo irregular o pérdida de eficiencia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='images/eficaselec.png')}}" alt="" class="logo-image" />
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>
+                    Brindamos soluciones integrales en instalaciones y mantenimiento eléctrico bajo el estándar SEF:
+                    SEGURO, EFICAZ y FUNCIONAL.
+                </p>
+            </div>
+            <div class="box">
+                <h2>CONTACTO</h2>
+                <p>Tlf: 937081073 / 917996653</p>
+                <p>Email: eficaselec@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/profile.php?id=61572271664982" target="_blank"class="fa fa-facebook"></a>
+                    <a href="https://www.youtube.com/@eficaselec-wn9ro" target="_blank" class="fa fa-youtube"></a>
+                    <a href="https://www.tiktok.com/@usereficaselec" target="_blank" class="fa-brands fa-tiktok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy;2025 <b>Slee Dw</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>
